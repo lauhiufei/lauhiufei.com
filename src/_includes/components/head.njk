@@ -1,0 +1,57 @@
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy" content="{{ csp.regular | safe }}">
+  
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+
+  <meta name="theme-color" content="#f9c412">
+
+  {% if notfull or hide %}
+    <meta name="robots" content="noindex">
+  {% else %}
+    <meta name="robots" content="max-snippet:-1, max-image-preview: large, max-video-preview: -1">
+  {% endif %}
+
+  {% set pageUrlLength = page.url | length %}
+  {% if pageUrlLength > 1 %}
+    {% set pageTitle = [title or renderData.title, " | Note of Thi"] | join %}
+  {% else %}
+    {% set pageTitle = title or renderData.title or settings.title %}
+  {% endif %}
+  <title>{{ pageTitle }}</title>
+
+  <link rel="preconnect" href="/" crossorigin>
+
+  {# KaTeX #}
+  {% if math %}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.3/dist/katex.min.css" integrity="sha384-Juol1FqnotbkyZUT5Z7gUPjQ9gzlwCENvUZTpQBAPxtusdwFLRy382PSDx5UUJ4/" crossorigin="anonymous">
+
+    <!-- The loading of KaTeX is deferred to speed up page rendering -->
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.3/dist/katex.min.js" integrity="sha384-97gW6UIJxnlKemYavrqDHSX3SiygeOwIZhwyOKRfSaf0JWKRVj9hLASHgFTzT+0O" crossorigin="anonymous"></script>
+
+    <!-- To automatically render math in text elements, include the auto-render extension: -->
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.3/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"
+        onload="renderMathInElement(document.body);"></script>
+  {% endif %}
+  
+  {# Prismjs style #}
+  {# <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1/themes/prism-funky.min.css"> #}
+
+  <style>
+    body {
+      visibility: hidden;
+      opacity: 0;
+    }
+  </style>
+  <noscript>
+    <style>
+      body {
+        visibility: visible;
+        opacity: 1;
+      }
+    </style>
+  </noscript>
+
+  <!-- css is inserted by optimize-html custom plugin -->
+</head>

@@ -1,0 +1,58 @@
+[
+  {
+    "name": "Blog",
+    "icon": "blog.svg",
+    "fontello": "icon-feather",
+    "showInNoteToc": false,
+    "hideFromTopics": true
+  },
+  {
+    "name": "Deep Learning",
+    "color": "#fde193",
+    "icon": "dl.svg",
+    "fontello": "icon-dl",
+    "showInNoteToc": true
+  },
+  {
+    "name": "Python",
+    "color": "#a0ffa0",
+    "icon": "python.svg",
+    "fontello": "icon-python",
+    "showInNoteToc": true
+  },
+  {
+    "name": "Prob & Stats",
+    "color": "#daff9f",
+    "icon": "stats.svg",
+    "fontello": "icon-stats",
+    "showInNoteToc": true
+  },
+  {
+    "name": "JavaScript",
+    "icon": "js.svg",
+    "fontello": "icon-js-solid",
+    "showInNoteToc": true
+  },
+  {
+    "name": "Web Dev",
+    "icon": "web-dev.svg",
+    "fontello": "icon-web-dev",
+    "showInNoteToc": true
+  },
+  {
+    "name": "Others",
+    "color": "#00cec9",
+    "icon": "others.svg",
+    "fontello": "icon-others-solid",
+    "showInNoteToc": true,
+    "hideFromTopics": true
+  },
+  {
+    "name": "11ty",
+    "icon": "11ty.jpg"
+  },
+  {
+    "name": "Static Site Generators",
+    "icon": "ssg.svg"
+  } 
+]

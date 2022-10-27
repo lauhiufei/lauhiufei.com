@@ -1,0 +1,19 @@
+{
+  "title": "🔥 Hiu-Fei Lau",
+  "url": "https://lxfminions.github.io",
+  "domain": ".com",
+  "description": "something",
+  "feed": {
+    "subtitle": "something",
+    "filename": "feed.xml",
+    "path": "/feed/feed.xml",
+    "id": "https://some.com"
+  },
+  "author": {
+    "name": "Liu XiaoFei",
+    "twitterHandle": "lxfei",
+    "url": "https://lxfminions.github.io"
+  },
+  "outdatedTime": 365
+
+}

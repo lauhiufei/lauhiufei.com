@@ -1,0 +1,28 @@
+---
+layout: page
+title: All blog posts
+icon: /img/cats/blog.svg
+customClass: "page-blog bg-gray"
+permalink: /blog/
+containerWidth: wide
+containerBackgroundType: gray
+---
+
+<div class="container wide">
+
+  {% set internalPosts = collections['Blog'] | normalizePosts({debugSource: 'blog page'}) %}
+  {% set internalPostsByCategory = internalPosts | filterByCategory({categoryName: 'Blog', byTag: false, external: false, debugSource: 'blog - internal'}) %}
+  {% set newPostList = internalPostsByCategory %}
+
+  {% if newPostList | length > 0 %}
+    {# {% set customClass = "single-line plain" %}
+    {% include "components/toggle-posts-buttons.njk" %} #}
+    {% set customClass = 'list-of-blog' %}
+    {% set customIcon = false %}
+    {% set sortBy = 'date' %}
+    {% include "components/postslist.njk" %}
+  {% else %}
+    <div class="no-posts">This topic contains no post, please return later.</div>
+  {% endif %}
+  
+</div>
